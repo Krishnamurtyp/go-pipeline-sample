@@ -1,0 +1,21 @@
+pipeline:
+  name: "Hello World CI Pipeline"
+  identifier: "Hello_World_CI"
+  projectIdentifier: "Your_Project_ID"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+    - stage:
+        name: "Build"
+        identifier: "Build"
+        type: "CI"
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: "Print Hello World"
+                  identifier: "Print_Hello_World"
+                  type: "Run"
+                  spec:
+                    shell: "sh"
+                    command: "echo Hello, World!"
